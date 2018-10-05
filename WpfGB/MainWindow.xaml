@@ -7,6 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel>
+            <Label VerticalAlignment="Top" x:Name="Label1" >Рабочие:</Label>
+            <ComboBox VerticalAlignment="Top" x:Name="Employee" SelectionChanged="ChangeEmp"></ComboBox>
+
+            <TextBlock Name="TextBox1" />
+
+            <StackPanel Name="Editor">
+                <Label>Имя:</Label>
+                <TextBox Name="TextName"/>
+
+                <Label>Возраст:</Label>
+                <TextBox Name="TextAge"/>
+
+                <Label VerticalAlignment="Top" >Отделы:</Label>
+                <ComboBox VerticalAlignment="Top"  x:Name="Department" />
+
+                <StackPanel>
+                    <Button  Click="EditEmp">Редактировать</Button>
+                    <Button  Click="NewEmp">Создать новый</Button>
+
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
