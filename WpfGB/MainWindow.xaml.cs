@@ -133,7 +133,7 @@ namespace WpfGB
 
 
         /// <summary>
-        /// Перерисовка дин. элементов (надписей и т.д.)
+        /// Перерисовка дин. элементов (надписей и т.д.). К сожалению, это работает пока некорректно
         /// </summary>
         private void UpdateElement()
         {
@@ -143,6 +143,11 @@ namespace WpfGB
             Employee.UpdateLayout();
             Department.ItemsSource = departments;
         }
+
+        /// <summary>
+        /// Проверка на корректность ввода, конкретно поля с возрастом, которое должно вводиться цифрами.
+        /// </summary>
+        /// <returns>Верно или нет</returns>
         private bool IsCorrect()
         {
             string regex = @"^[0-9]+$";
