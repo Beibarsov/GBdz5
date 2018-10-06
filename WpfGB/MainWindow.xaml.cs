@@ -137,7 +137,9 @@ namespace WpfGB
         /// </summary>
         private void UpdateElement()
         {
+           // Employee.ItemsSource = null;
             Employee.ItemsSource = employees;
+           // Employee.Sour
             Employee.UpdateLayout();
             Department.ItemsSource = departments;
         }
